@@ -1,0 +1,14 @@
+# Source code redirect menu items definition
+# Note: 1001 is the custom "URL Redirects" menu item.
+entity.source_code_redirect.collection:
+  title: 'Source Code Redirects'
+  description: 'List Source code redirect entities'
+  route_name: source_code_redirect.list
+  parent: system.admin_content
+  weight: 1002
+
+source_code_redirect.admin.content.settings:
+  title: 'Source code redirect settings'
+  description: 'Configure source code redirect entities'
+  route_name: source_code_redirect.settings
+  parent: system.atge_admin

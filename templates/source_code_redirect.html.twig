@@ -1,0 +1,22 @@
+{#
+/**
+ * @file source_code_redirect.html.twig
+ * Default theme implementation to present Source code redirect data.
+ *
+ * This template is used when viewing Source code redirect pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_source_code_redirect()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('source_code_redirect') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>

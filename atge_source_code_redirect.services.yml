@@ -1,0 +1,21 @@
+services:
+  atge_source_code_redirect.request_repository:
+    class: Drupal\atge_source_code_redirect\SourceCodeRedirectRepository
+    arguments: ['@database']
+    tags:
+      - { name: backend_overridable }
+  atge_source_code_redirect.cookie_manager:
+    class: Drupal\atge_source_code_redirect\SourceCodeRedirectCookieManager
+    arguments: []
+    tags:
+      - { name: backend_overridable }
+  atge_source_code_redirect.return_redirect:
+    class: Drupal\atge_source_code_redirect\SourceCodeRedirectReturnRedirect
+    arguments: ['@redirect.repository','@redirect.checker','@path_processor_manager','@router.request_context','@language_manager']
+    tags:
+      - { name: backend_overridable }
+  atge_source_code_redirect.source_code_request_subscriber:
+    class: Drupal\atge_source_code_redirect\EventSubscriber\SourceCodeRedirectRequestSubscriber
+    arguments: ['@atge_source_code_redirect.request_repository','@atge_source_code_redirect.cookie_manager', '@atge_source_code_redirect.return_redirect']
+    tags:
+      - { name: event_subscriber }

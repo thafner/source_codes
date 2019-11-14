@@ -1,0 +1,6 @@
+entity.source_code_redirect.add_form:
+  route_name: entity.source_code_redirect.add_form
+  title: 'Add Source code redirect'
+  appears_on:
+    - entity.source_code_redirect.collection
+    - 'source_code_redirect.list'

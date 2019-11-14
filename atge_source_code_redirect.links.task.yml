@@ -1,0 +1,21 @@
+# Source code redirect routing definition
+source_code_redirect.settings_tab:
+  route_name: source_code_redirect.settings
+  title: 'Settings'
+  base_route: source_code_redirect.settings
+
+entity.source_code_redirect.canonical:
+  route_name: entity.source_code_redirect.canonical
+  base_route: entity.source_code_redirect.canonical
+  title: 'View'
+
+entity.source_code_redirect.edit_form:
+  route_name: entity.source_code_redirect.edit_form
+  base_route: entity.source_code_redirect.canonical
+  title: 'Edit'
+
+entity.source_code_redirect.delete_form:
+  route_name:  entity.source_code_redirect.delete_form
+  base_route:  entity.source_code_redirect.canonical
+  title: Delete
+  weight: 10
