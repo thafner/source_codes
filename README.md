@@ -11,12 +11,12 @@ For example, `/sign-up-for-our-special-thanksgiving-event` (call this the incomi
 
 ## Problem
 Client needs the ability to:
-1. Look up a source code based on the incoming URL and add it as a cookie
-2. Redirect to the destination URL 
+* Look up a source code based on the incoming URL and add it as a cookie
+* Redirect to the destination URL 
 ## Solution
-1. Create a custom Source Code entity [SourceCodeRedirect](https://github.com/thafner/source_codes/blob/master/src/Entity/SourceCodeRedirect.php)
-2. Implement entity_refererence_autocomplete on Redirect entity types [entityReference](https://github.com/thafner/source_codes/blob/master/src/Entity/SourceCodeRedirect.php#L200)
-  * This allows us to look up a redirect to get the destination URL
-3. Create an EventSubscriber to add the cookie [EventSubscriber](https://github.com/thafner/source_codes/blob/master/src/EventSubscriber/SourceCodeRedirectRequestSubscriber.php)
-  * This is where we match Redirect and SourceCodeRedirect entities and create a cookie based on the results
-  * The most important part of this is that this all takes place *directly before* the redirect module EventSubscriber.
+* Create a custom Source Code entity [SourceCodeRedirect](https://github.com/thafner/source_codes/blob/master/src/Entity/SourceCodeRedirect.php)
+* Implement entity_refererence_autocomplete on Redirect entity types [entityReference](https://github.com/thafner/source_codes/blob/master/src/Entity/SourceCodeRedirect.php#L200)
+   *  This allows us to look up a redirect to get the destination URL
+* Create an EventSubscriber to add the cookie [EventSubscriber](https://github.com/thafner/source_codes/blob/master/src/EventSubscriber/SourceCodeRedirectRequestSubscriber.php)
+   *  This is where we match Redirect and SourceCodeRedirect entities and create a cookie based on the results
+   *  The most important part of this is that this all takes place *directly before* the redirect module EventSubscriber.
