@@ -1,0 +1,55 @@
+<?php
+
+/**
+ * @file
+ * Contains demo_source_code_redirect.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Url;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Implements hook_help().
+ */
+function demo_source_code_redirect_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the demo_source_code_redirect module.
+    case 'help.page.demo_source_code_redirect':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_redirect_predelete().
+ *
+ * Prevent deleting a redirect if there is a related source code.
+ *
+ * {@inheritdoc}
+ */
+function demo_source_code_redirect_redirect_predelete(EntityInterface $entity) {
+  $rid = $entity->id();
+  $connection = \Drupal::database();
+  $query = $connection->query("SELECT id FROM {source_code_redirect} WHERE redirect = :rid", [
+    ':rid' => $rid,
+  ]);
+  $result = $query->fetchAll();
+
+  if (isset($result) && !empty($result)) {
+    $source_code_id = $result[0]->id;
+    $destination = Url::fromRoute('entity.source_code_redirect.edit_form', ['source_code_redirect' => $source_code_id])->toString();
+    $response = new RedirectResponse(\Drupal::request()->getRequestUri());
+    $response->send();
+
+    \Drupal::messenger()->addMessage(t('There is an existing <a href="@destination">Source Code Redirect</a> associated with this redirect. It is required that the Source Code Redirect is deleted before it\'s associated redirect .', ['@destination' => $destination]), 'error');
+    exit;
+  }
+
+}
+
