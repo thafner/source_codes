@@ -1,9 +1,0 @@
-name: 'Demo Source Code Redirect'
-type: module
-description: 'Provides functionality that allows for a source code to be added to a redirect.'
-core: 8.x
-package: 'Demo'
-dependencies:
- - redirect:redirect
- - drupal:link
- - drupal:views
