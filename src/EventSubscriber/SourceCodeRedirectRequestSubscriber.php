@@ -1,10 +1,10 @@
 <?php
 
-namespace Drupal\atge_source_code_redirect\EventSubscriber;
+namespace Drupal\demo_source_code_redirect\EventSubscriber;
 
-use Drupal\atge_source_code_redirect\SourceCodeRedirectRepository;
-use Drupal\atge_source_code_redirect\SourceCodeRedirectCookieManager;
-use Drupal\atge_source_code_redirect\SourceCodeRedirectReturnRedirect;
+use Drupal\demo_source_code_redirect\SourceCodeRedirectRepository;
+use Drupal\demo_source_code_redirect\SourceCodeRedirectCookieManager;
+use Drupal\demo_source_code_redirect\SourceCodeRedirectReturnRedirect;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\EventDispatcher\Event;
 use Symfony\Component\HttpKernel\KernelEvents;
@@ -17,32 +17,32 @@ class SourceCodeRedirectRequestSubscriber implements EventSubscriberInterface {
   /**
    * The repository for source code redirect entities.
    *
-   * @var \Drupal\atge_source_code_redirect\SourceCodeRedirectRepository
+   * @var \Drupal\demo_source_code_redirect\SourceCodeRedirectRepository
    */
   protected $sourceCodeRedirectRepository;
 
   /**
    * The cookie manager for source codes.
    *
-   * @var \Drupal\atge_source_code_redirect\SourceCodeRedirectCookieManager
+   * @var \Drupal\demo_source_code_redirect\SourceCodeRedirectCookieManager
    */
   protected $sourceCodeRedirectCookieManager;
 
   /**
    * The repository for getting redirects.
    *
-   * @var \Drupal\atge_source_code_redirect\SourceCodeRedirectReturnRedirect
+   * @var \Drupal\demo_source_code_redirect\SourceCodeRedirectReturnRedirect
    */
   protected $sourceCodeRedirectReturnRedirect;
 
   /**
    * SourceCodeRedirectRequestSubscriber constructor.
    *
-   * @param \Drupal\atge_source_code_redirect\SourceCodeRedirectRepository $sourceCodeRedirectRepository
+   * @param \Drupal\demo_source_code_redirect\SourceCodeRedirectRepository $sourceCodeRedirectRepository
    *   The repository for source code redirect entities.
-   * @param \Drupal\atge_source_code_redirect\SourceCodeRedirectCookieManager $sourceCodeRedirectCookieManager
+   * @param \Drupal\demo_source_code_redirect\SourceCodeRedirectCookieManager $sourceCodeRedirectCookieManager
    *   The cookie manager for source codes.
-   * @param \Drupal\atge_source_code_redirect\SourceCodeRedirectReturnRedirect $sourceCodeRedirectReturnRedirect
+   * @param \Drupal\demo_source_code_redirect\SourceCodeRedirectReturnRedirect $sourceCodeRedirectReturnRedirect
    *   The repository for getting redirects.
    */
   public function __construct(SourceCodeRedirectRepository $sourceCodeRedirectRepository, SourceCodeRedirectCookieManager $sourceCodeRedirectCookieManager, SourceCodeRedirectReturnRedirect $sourceCodeRedirectReturnRedirect) {

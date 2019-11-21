@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\atge_source_code_redirect\Form;
+namespace Drupal\demo_source_code_redirect\Form;
 
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
@@ -8,7 +8,7 @@ use Drupal\Core\Form\FormStateInterface;
 /**
  * Class SourceCodeRedirectSettingsForm.
  *
- * @ingroup atge_source_code_redirect
+ * @ingroup demo_source_code_redirect
  */
 class SourceCodeRedirectSettingsForm extends FormBase {
 

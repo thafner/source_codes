@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\atge_source_code_redirect\Form;
+namespace Drupal\demo_source_code_redirect\Form;
 
 use Drupal\Core\Entity\ContentEntityForm;
 use Drupal\Core\Form\FormStateInterface;
@@ -8,7 +8,7 @@ use Drupal\Core\Form\FormStateInterface;
 /**
  * Form controller for Source code redirect edit forms.
  *
- * @ingroup atge_source_code_redirect
+ * @ingroup demo_source_code_redirect
  */
 class SourceCodeRedirectForm extends ContentEntityForm {
 
@@ -16,7 +16,7 @@ class SourceCodeRedirectForm extends ContentEntityForm {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    /* @var $entity \Drupal\atge_source_code_redirect\Entity\SourceCodeRedirect */
+    /* @var $entity \Drupal\demo_source_code_redirect\Entity\SourceCodeRedirect */
     $form = parent::buildForm($form, $form_state);
 
     $entity = $this->entity;

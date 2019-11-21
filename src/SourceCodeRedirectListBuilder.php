@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\atge_source_code_redirect;
+namespace Drupal\demo_source_code_redirect;
 
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\EntityListBuilder;
@@ -9,7 +9,7 @@ use Drupal\Core\Link;
 /**
  * Defines a class to build a listing of Source code redirect entities.
  *
- * @ingroup atge_source_code_redirect
+ * @ingroup demo_source_code_redirect
  */
 class SourceCodeRedirectListBuilder extends EntityListBuilder {
 

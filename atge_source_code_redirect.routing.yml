@@ -1,5 +1,5 @@
 source_code_redirect.list:
-  path: '/admin/content/atge/source-code-redirect'
+  path: '/admin/content/demo/source-code-redirect'
   defaults:
     _entity_list: 'source_code_redirect'
     _title: 'Source Code Redirects'

@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Contains atge_source_code_redirect.module.
+ * Contains demo_source_code_redirect.module.
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
@@ -13,10 +13,10 @@ use Drupal\Core\Entity\EntityInterface;
 /**
  * Implements hook_help().
  */
-function atge_source_code_redirect_help($route_name, RouteMatchInterface $route_match) {
+function demo_source_code_redirect_help($route_name, RouteMatchInterface $route_match) {
   switch ($route_name) {
-    // Main module help for the atge_source_code_redirect module.
-    case 'help.page.atge_source_code_redirect':
+    // Main module help for the demo_source_code_redirect module.
+    case 'help.page.demo_source_code_redirect':
       $output = '';
       $output .= '<h3>' . t('About') . '</h3>';
       $output .= '<p>' . t('My Awesome Module') . '</p>';
@@ -33,7 +33,7 @@ function atge_source_code_redirect_help($route_name, RouteMatchInterface $route_
  *
  * {@inheritdoc}
  */
-function atge_source_code_redirect_redirect_predelete(EntityInterface $entity) {
+function demo_source_code_redirect_redirect_predelete(EntityInterface $entity) {
   $rid = $entity->id();
   $connection = \Drupal::database();
   $query = $connection->query("SELECT id FROM {source_code_redirect} WHERE redirect = :rid", [

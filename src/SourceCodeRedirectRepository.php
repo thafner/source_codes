@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\atge_source_code_redirect;
+namespace Drupal\demo_source_code_redirect;
 
 use Drupal\Core\Database\Connection;
 use Drupal\redirect\Entity\Redirect;
@@ -25,7 +25,7 @@ class SourceCodeRedirectRepository {
    * @param \Drupal\redirect\Entity\Redirect $redirect
    *   The redirect to find a source code for.
    *
-   * @return \Drupal\atge_source_code_redirect\Entity\SourceCodeRedirect
+   * @return \Drupal\demo_source_code_redirect\Entity\SourceCodeRedirect
    *   The source code entity for the redirect.
    */
   public function findMatchingSourceCodeRedirect(Redirect $redirect) {

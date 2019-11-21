@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\atge_source_code_redirect\Entity;
+namespace Drupal\demo_source_code_redirect\Entity;
 
 use Drupal\views\EntityViewsData;
 

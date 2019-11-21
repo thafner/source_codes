@@ -11,4 +11,4 @@ source_code_redirect.admin.content.settings:
   title: 'Source code redirect settings'
   description: 'Configure source code redirect entities'
   route_name: source_code_redirect.settings
-  parent: system.atge_admin
+  parent: system.demo_admin

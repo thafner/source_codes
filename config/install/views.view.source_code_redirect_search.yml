@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
-    - atge_source_code_redirect
+    - demo_source_code_redirect
     - link
     - redirect
     - user
@@ -547,7 +547,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: admin/content/atge/source-code-redirect
+      path: admin/content/demo/source-code-redirect
     cache_metadata:
       max-age: -1
       contexts:

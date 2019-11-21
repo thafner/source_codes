@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\atge_source_code_redirect\Entity;
+namespace Drupal\demo_source_code_redirect\Entity;
 
 use Drupal\Core\Entity\EntityStorageInterface;
 use Drupal\Core\Field\BaseFieldDefinition;
@@ -13,25 +13,25 @@ use Drupal\user\UserInterface;
 /**
  * Defines the Source code redirect entity.
  *
- * @ingroup atge_source_code_redirect
+ * @ingroup demo_source_code_redirect
  *
  * @ContentEntityType(
  *   id = "source_code_redirect",
  *   label = @Translation("Source code redirect"),
  *   handlers = {
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",
- *     "list_builder" = "Drupal\atge_source_code_redirect\SourceCodeRedirectListBuilder",
- *     "views_data" = "Drupal\atge_source_code_redirect\Entity\SourceCodeRedirectViewsData",
+ *     "list_builder" = "Drupal\demo_source_code_redirect\SourceCodeRedirectListBuilder",
+ *     "views_data" = "Drupal\demo_source_code_redirect\Entity\SourceCodeRedirectViewsData",
  *
  *     "form" = {
- *       "default" = "Drupal\atge_source_code_redirect\Form\SourceCodeRedirectForm",
- *       "add" = "Drupal\atge_source_code_redirect\Form\SourceCodeRedirectForm",
- *       "edit" = "Drupal\atge_source_code_redirect\Form\SourceCodeRedirectForm",
- *       "delete" = "Drupal\atge_source_code_redirect\Form\SourceCodeRedirectDeleteForm",
+ *       "default" = "Drupal\demo_source_code_redirect\Form\SourceCodeRedirectForm",
+ *       "add" = "Drupal\demo_source_code_redirect\Form\SourceCodeRedirectForm",
+ *       "edit" = "Drupal\demo_source_code_redirect\Form\SourceCodeRedirectForm",
+ *       "delete" = "Drupal\demo_source_code_redirect\Form\SourceCodeRedirectDeleteForm",
  *     },
- *     "access" = "Drupal\atge_source_code_redirect\SourceCodeRedirectAccessControlHandler",
+ *     "access" = "Drupal\demo_source_code_redirect\SourceCodeRedirectAccessControlHandler",
  *     "route_provider" = {
- *       "html" = "Drupal\atge_source_code_redirect\SourceCodeRedirectHtmlRouteProvider",
+ *       "html" = "Drupal\demo_source_code_redirect\SourceCodeRedirectHtmlRouteProvider",
  *     },
  *   },
  *   base_table = "source_code_redirect",
@@ -42,11 +42,11 @@ use Drupal\user\UserInterface;
  *     "uid" = "user_id"
  *   },
  *   links = {
- *     "canonical" = "/admin/content/atge/source-code-redirect/",
- *     "add-form" = "/admin/content/atge/source-code-redirect/add",
- *     "edit-form" = "/admin/content/atge/source-code-redirect/{source_code_redirect}/edit",
- *     "delete-form" = "/admin/content/atge/source-code-redirect/{source_code_redirect}/delete",
- *     "collection" = "/admin/content/atge/source-code-redirect/list",
+ *     "canonical" = "/admin/content/demo/source-code-redirect/",
+ *     "add-form" = "/admin/content/demo/source-code-redirect/add",
+ *     "edit-form" = "/admin/content/demo/source-code-redirect/{source_code_redirect}/edit",
+ *     "delete-form" = "/admin/content/demo/source-code-redirect/{source_code_redirect}/delete",
+ *     "collection" = "/admin/content/demo/source-code-redirect/list",
  *   },
  *   field_ui_base_route = "source_code_redirect.settings"
  * )
@@ -204,7 +204,7 @@ class SourceCodeRedirect extends ContentEntityBase implements SourceCodeRedirect
       ->setSetting('target_type', 'redirect')
       ->setSetting('handler', 'default')
       ->setDisplayOptions('form', [
-        // @see \Drupal\atge_source_code_redirect\Plugin\EntityReferenceSelection\RedirectSelection
+        // @see \Drupal\demo_source_code_redirect\Plugin\EntityReferenceSelection\RedirectSelection
         'type' => 'entity_reference_autocomplete',
         'weight' => 5,
         'settings' => [

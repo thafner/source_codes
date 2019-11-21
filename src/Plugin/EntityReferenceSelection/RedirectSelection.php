@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\atge_source_code_redirect\Plugin\EntityReferenceSelection;
+namespace Drupal\demo_source_code_redirect\Plugin\EntityReferenceSelection;
 
 use Drupal\Core\Entity\Plugin\EntityReferenceSelection\DefaultSelection;
 

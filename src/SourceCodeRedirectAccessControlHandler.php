@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\atge_source_code_redirect;
+namespace Drupal\demo_source_code_redirect;
 
 use Drupal\Core\Entity\EntityAccessControlHandler;
 use Drupal\Core\Entity\EntityInterface;
@@ -10,7 +10,7 @@ use Drupal\Core\Access\AccessResult;
 /**
  * Access controller for the Source code redirect entity.
  *
- * @see \Drupal\atge_source_code_redirect\Entity\SourceCodeRedirect.
+ * @see \Drupal\demo_source_code_redirect\Entity\SourceCodeRedirect.
  */
 class SourceCodeRedirectAccessControlHandler extends EntityAccessControlHandler {
 
@@ -18,7 +18,7 @@ class SourceCodeRedirectAccessControlHandler extends EntityAccessControlHandler 
    * {@inheritdoc}
    */
   protected function checkAccess(EntityInterface $entity, $operation, AccountInterface $account) {
-    /** @var \Drupal\atge_source_code_redirect\Entity\SourceCodeRedirectInterface $entity */
+    /** @var \Drupal\demo_source_code_redirect\Entity\SourceCodeRedirectInterface $entity */
     switch ($operation) {
       case 'view':
         if (!$entity->isPublished()) {

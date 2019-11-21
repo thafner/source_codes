@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\atge_source_code_redirect\Entity;
+namespace Drupal\demo_source_code_redirect\Entity;
 
 use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\Core\Entity\EntityChangedInterface;
@@ -9,7 +9,7 @@ use Drupal\user\EntityOwnerInterface;
 /**
  * Provides an interface for defining Source code redirect entities.
  *
- * @ingroup atge_source_code_redirect
+ * @ingroup demo_source_code_redirect
  */
 interface SourceCodeRedirectInterface extends ContentEntityInterface, EntityChangedInterface, EntityOwnerInterface {
 
@@ -27,7 +27,7 @@ interface SourceCodeRedirectInterface extends ContentEntityInterface, EntityChan
    * @param string $source_code
    *   The Source code redirect source code value.
    *
-   * @return \Drupal\atge_source_code_redirect\Entity\SourceCodeRedirectInterface
+   * @return \Drupal\demo_source_code_redirect\Entity\SourceCodeRedirectInterface
    *   The called Source code redirect entity.
    */
   public function setSourceCode($source_code);
@@ -46,7 +46,7 @@ interface SourceCodeRedirectInterface extends ContentEntityInterface, EntityChan
    * @param \Drupal\redirect\Entity\Redirect $redirect
    *   The Redirect to associate with the source code.
    *
-   * @return \Drupal\atge_source_code_redirect\Entity\SourceCodeRedirectInterface
+   * @return \Drupal\demo_source_code_redirect\Entity\SourceCodeRedirectInterface
    *   The called Source code redirect entity.
    */
   public function setRedirect($redirect);
