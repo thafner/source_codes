@@ -16,7 +16,7 @@ Client needs the ability to:
 ## Solution
 1. Create a custom Source Code entity [SourceCodeRedirect](https://github.com/thafner/source_codes/blob/master/src/Entity/SourceCodeRedirect.php)
 2. Implement entity_refererence_autocomplete on Redirect entity types [entityReference](https://github.com/thafner/source_codes/blob/master/src/Entity/SourceCodeRedirect.php#L200)
-  1. This allows us to look up a redirect to get the destination URL
+  * This allows us to look up a redirect to get the destination URL
 3. Create an EventSubscriber to add the cookie [EventSubscriber](https://github.com/thafner/source_codes/blob/master/src/EventSubscriber/SourceCodeRedirectRequestSubscriber.php)
-  1. This is where we match Redirect and SourceCodeRedirect entities and create a cookie based on the results
-  2. The most important part of this is that this all takes place *directly before* the redirect module EventSubscriber.
+  * This is where we match Redirect and SourceCodeRedirect entities and create a cookie based on the results
+  * The most important part of this is that this all takes place *directly before* the redirect module EventSubscriber.
