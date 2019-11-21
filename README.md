@@ -19,4 +19,4 @@ Client needs the ability to:
    *  This allows us to look up a redirect to get the destination URL
 * Create an EventSubscriber to add the cookie [EventSubscriber](https://github.com/thafner/source_codes/blob/master/src/EventSubscriber/SourceCodeRedirectRequestSubscriber.php)
    *  This is where we match Redirect and SourceCodeRedirect entities and create a cookie based on the results
-   *  The most important part of this is that this all takes place *directly before* the redirect module EventSubscriber.
+   *  The most important part of this is that this all takes place **directly before** the redirect module EventSubscriber.
